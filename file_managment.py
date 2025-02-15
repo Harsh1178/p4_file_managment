@@ -71,14 +71,19 @@ def file(cs):
                 print("File does not exists")
                 print("Enter a existing file")
                 file(4)
+        case 8:
+            pass
+
+
 def main():
     print("Enter the number you need to perform actions on file")
     print("1 : Create a file")
     print("2 : update a file")
     print("3 : edit a file")
     print("4 : remove a file")
+    print("8 : To quit ")
     print()
-    valid_integers=[1,2,3,4]
+    valid_integers=[1,2,3,4,8]
 
     
     while True:
@@ -90,6 +95,7 @@ def main():
         
             else:
                 print(f"Invalid input! Please choose one of the following: {valid_integers}")
+                main()
                 
             # break
         except ValueError:
